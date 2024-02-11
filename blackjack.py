@@ -186,7 +186,7 @@ while True:
                 dealer_busts(player, dealer, chips)
                 break
 
-    if player.score < 21 and dealer.score < 21:
+    if player.score <= 21 and dealer.score <= 21:
         if player.score > dealer.score:
             show_all(player, dealer)
             player_wins(player, dealer, chips)
@@ -205,17 +205,20 @@ while True:
         print("You don't have anymore chips to place a bet!")
         print("Game Over")
         break
-    play_agn = input("Do you want to play again? (y/n): ")
-
-    if play_agn == 'y':
-        continue
-    else:
-        print("Thanks for playing!")
-        if chips.total > 100:
-            print(f"You walked away with a profit of ${chips.total - 100}")
-        else:
-            print(f"You walked away with a loss of ${100 - chips.total}")
-        break
     
+    else:
+        play_agn = input("Do you want to play again? (y/n): ")
+
+        if play_agn == 'y':
+            continue
+        
+        else:
+            print("Thanks for playing!")
+            if chips.total > 100:
+                print(f"You walked away with a profit of ${chips.total - 100}")
+            else:
+                print(f"You walked away with a loss of ${100 - chips.total}")
+            break  
+
   
     
