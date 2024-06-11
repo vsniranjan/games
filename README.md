@@ -1,5 +1,7 @@
 ### GAMES
 
+**This repository is now archived and there won't be anymore games added here, all my newer projects(including games) will be in their seperate repositories as they should be :)**
+
 A repository for all the games that I make over time
 
 Each folder contains a .py script for the game and a text file
